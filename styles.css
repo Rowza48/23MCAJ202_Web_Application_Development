@@ -1,0 +1,9 @@
+.price {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 18px;
+}
+.menu-item:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
