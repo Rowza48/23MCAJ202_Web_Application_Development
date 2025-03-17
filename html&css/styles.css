@@ -1,0 +1,14 @@
+.price {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu-item h3 {
+    color: #6e6112;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    
+}

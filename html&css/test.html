@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 410px;
+        }
+
+        .form h2 {
+            margin-bottom: 15px;
+            text-align: center;
+            color: #913384;
+        }
+
+        .form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+
+        .form input, .form textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form textarea {
+            resize: none;
+            height: 100px;
+        }
+        
+        .form button {
+            width: 100%;
+            padding: 10px;
+            background: #a06698;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .form button:hover {
+            background: #d63ecf;
+        }
+    </style>
+</head>
+<body background="./pic4.png">
+
+    <form class="form">
+        <h2>Leave a Comment</h2>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="comment">Comment</label>
+        <textarea id="comment" name="comment" placeholder="Write your comment here..." required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
