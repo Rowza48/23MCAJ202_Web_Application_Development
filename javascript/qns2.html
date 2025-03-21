@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <!--CSS styling-->
+    <style> 
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 300px;  /* Adds space at the top of the page */
+        }
+        button {   /*styles the button*/
+            padding: 10px 20px;  /* Adds space inside the button */
+            font-size: 16px;  /* Sets a readable text size */
+            cursor: pointer;
+            background-color: #4593e7; /*sets the button color */
+            color: white; 
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #5d6164; /* Changes button color to a darker blue on hover */
+        }
+        
+    </style>
+</head>
+<body> 
+
+    <h2>Click the Button to Change Background Color</h2><br><br> <!--heading-->
+    <button onclick="changeBackgroundColor()">Change Color</button> <!--creates a button with an onclick event-->
+    <!--javascript part-->
+    <script>
+        function changeBackgroundColor() {   //fuction to change background color.
+            const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"]; //Creates an array of colors.
+            const randomColor = colors[Math.floor(Math.random() * colors.length)]; //selects a random color from the array
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+</html>

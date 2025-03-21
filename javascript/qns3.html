@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image and Text on Hover</title>
+    <!--CSS Styling-->
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #content {   /* Style the content box*/
+            display: inline-block;
+            padding: 10px;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+        img {    /*styles the image*/
+            width: 400px;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body background="./images2.jpg"> <!--set a background image-->
+
+    <h2>Hover over the box to change the text and image</h2><br><br> <!--heading-->
+    <div id="content" onmouseover="changeContent()" onmouseout="resetContent()"> <!--content box that changes on hover-->
+        <p id="text">Hover over me!</p>
+        <img id="image" src="./image2.jpg" alt="Default Image"> <!--default image-->
+    </div>
+
+    <script>
+        function changeContent() {  //fuction to change content
+            document.getElementById("text").innerText = "You hovered over me!";  //change text
+            document.getElementById("image").src = "image1.jpg";   //change the image
+        }
+
+        function resetContent() {   //function to reset content
+            document.getElementById("text").innerText = "Hover over me!";  //reset text
+            document.getElementById("image").src = "image2.jpg";  //reset image
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./form.css">
+    <script>
+        function validateForm(event) {
+            
+            let firstName = document.getElementById("firstName").value.trim(); //user input
+            let lastName = document.getElementById("lastName").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim(); //user input
+            let password = document.getElementById("password").value.trim();
+
+            let namePattern = /^[A-Za-z]+$/;  //defining validation patterns
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            let phonePattern = /^[0-9]{10}$/;
+
+            if (!namePattern.test(firstName)) {   // Checks if the input matches the pattern.
+                alert("First name should contain only letters."); //Displays an error message if validation fails.
+                return false;
+            }
+
+            if (!namePattern.test(lastName)) {
+                alert("Last name should contain only letters.");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {    // Checks if the input matches the pattern.
+                alert("Enter a valid email address.");
+                return false;
+            }
+
+            if (!phonePattern.test(phone)) {    // Checks if the input matches the pattern.
+                alert("Phone number must be 10 digits.");
+                return false;
+            }
+
+            if (password.length < 6) {    // Checks if the input matches the pattern.
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            alert("Registration successful!");  //Final Success Message
+            return true;
+        }
+    </script>
+</head>
+<body background="./pic2.jpg">   <!--body section -->
+    <div class="container">
+         <div class="form-box"> 
+            <h2>Registration Form</h2>
+            <form onsubmit="return validateForm(event)">  <!--Calls the validateForm() function when the form is submitted-->
+                <input type="text" id="firstName" placeholder="First Name" required> <!--user inputs-->
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="date" id="dob" required>
+                <input type="tel" id="phone" placeholder="Phone" required>
+                <input type="password" id="password" placeholder="Password" required><br><br>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
